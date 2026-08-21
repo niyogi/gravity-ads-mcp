@@ -20,17 +20,15 @@ async function main() {
   getConfig();
 
   const server = new McpServer({ name: NAME, version: VERSION });
-  registerAllTools(server);
+  const toolCount = registerAllTools(server);
 
   console.error(`[${NAME}] Starting stdio transport...`);
 
   const transport = new StdioServerTransport();
   await server.connect(transport);
 
-  console.error(`[${NAME}] Connected. ${TOOLS_COUNT} tools registered.`);
+  console.error(`[${NAME}] Connected. ${toolCount} tools registered.`);
 }
-
-const TOOLS_COUNT = 26;
 
 main().catch((err) => {
   console.error(`[${NAME}] Fatal error during startup:`, err);

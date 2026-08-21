@@ -2,7 +2,7 @@ import { z } from "zod";
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { api } from "../client.js";
 import { jsonResult, tool } from "../lib.js";
-import { DATE_RANGE_SHAPE, dateStringSchema } from "./schemas.js";
+import { DATE_RANGE_SHAPE } from "./schemas.js";
 
 export function registerReportingTools(server: McpServer): void {
   server.registerTool(
