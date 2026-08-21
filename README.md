@@ -209,36 +209,6 @@ Once configured, try asking your agent:
 - Running via `npx` means no global install; the server starts fresh each session.
 - Regenerate your key anytime at <https://app.trygravity.ai> under **Settings → API Key**.
 
-## Development
-
-```bash
-git clone https://github.com/niyogi/gravity-ads-mcp.git
-cd gravity-ads-mcp
-npm install
-npm run build
-npm run typecheck
-```
-
-To test locally with a live API key:
-
-```bash
-GRAVITY_API_KEY=your-key node dist/index.js
-```
-
-The server speaks JSON-RPC over stdio. You can test the `tools/list` handshake:
-
-```bash
-echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | \
-  GRAVITY_API_KEY=your-key node dist/index.js
-```
-
-## Publishing
-
-```bash
-npm login
-npm publish
-```
-
 ## Troubleshooting
 
 | Problem | Fix |
@@ -249,6 +219,10 @@ npm publish
 | 422 Validation error | The server response includes details. Ask your agent to check the error and adjust the payload. |
 | OpenAI accounts: daily totals differ from dashboard | Set `"tz": "America/New_York"` in your request. OpenAI ad accounts report in that timezone. |
 | Windows: `npx` not found in Claude Desktop | Use `"command": "cmd"` with `"args": ["/c", "npx", "-y", "gravity-ads-mcp"]` in your config. |
+
+## Contributors
+
+For local setup, building, testing, and publishing instructions, see [DEVELOPMENT.md](DEVELOPMENT.md).
 
 ## License
 
