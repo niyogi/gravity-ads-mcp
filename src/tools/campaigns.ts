@@ -1,7 +1,7 @@
 import { z } from "zod";
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { api } from "../client.js";
-import { jsonResult, textResult, validationFail, tool } from "../lib.js";
+import { jsonResult, validationFail, tool } from "../lib.js";
 import {
   countriesArray,
   devicesArray,
