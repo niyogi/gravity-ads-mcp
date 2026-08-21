@@ -1,0 +1,40 @@
+{
+  "name": "gravity-ads-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for the Gravity advertiser dashboard API — create, edit, and report on campaigns from your local machine.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "gravity-ads-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run build",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.8.0"
+  },
+  "keywords": [
+    "mcp",
+    "gravity",
+    "advertising",
+    "campaign",
+    "dashboard"
+  ]
+}
