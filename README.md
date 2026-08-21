@@ -220,6 +220,10 @@ Once configured, try asking your agent:
 | OpenAI accounts: daily totals differ from dashboard | Set `"tz": "America/New_York"` in your request. OpenAI ad accounts report in that timezone. |
 | Windows: `npx` not found in Claude Desktop | Use `"command": "cmd"` with `"args": ["/c", "npx", "-y", "gravity-ads-mcp"]` in your config. |
 
+## Contributors
+
+For local setup, building, testing, and publishing instructions, see [DEVELOPMENT.md](DEVELOPMENT.md).
+
 ## License
 
 MIT
