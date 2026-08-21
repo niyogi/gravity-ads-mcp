@@ -116,6 +116,24 @@ claude mcp add gravity --env GRAVITY_API_KEY=your-gravity-api-key -- npx -y grav
 }
 ```
 
+### Other Clients
+
+Any MCP client that supports the `mcpServers` JSON format (same shape as Claude Desktop) can use this server. Add the following to your client's MCP config file:
+
+```json
+{
+  "mcpServers": {
+    "gravity": {
+      "command": "npx",
+      "args": ["-y", "gravity-ads-mcp"],
+      "env": {
+        "GRAVITY_API_KEY": "your-gravity-api-key"
+      }
+    }
+  }
+}
+```
+
 ## Environment Variables
 
 | Variable | Required | Default | Description |
